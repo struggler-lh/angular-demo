@@ -1,0 +1,6 @@
+<p>
+  component3 works!
+</p>
+<h2>跳转到component4</h2>
+<!-- *ngFor、routerLink动态路由 -->
+<a *ngFor = 'let id of ids' [routerLink]="['/component', id]"  > 跳转到：{{id}} </a>

@@ -1,3 +1,28 @@
 <h1>
   {{title}}
 </h1>
+<app-component1></app-component1>
+<!-- routerLink的配置方式 -->
+<a routerLink = "/component1">component1</a>
+<br>
+<!-- 前后需要同时使用中括号 -->
+<a [routerLink] = "['/component2']">component2</a>
+<br>
+<a routerLink = "/component3">component3</a>
+<!-- 重定向 -->
+<br>
+<a routerLink = "/">cmoponent4-重定向到cmoponent3</a>
+<!-- 重定向，默认路由 -->
+<br>
+<a routerLink = "">component5-重定向到cmoponent3</a>
+<!-- 参数化路由 -->
+<br>
+<label for="">参数化路由</label>
+<a routerLink = "/component/12">component6</a>
+
+<br>
+<label for="">xx</label>
+<a routerLink = "/component4">component7</a>
+<!-- 路由位置 -->
+<h2>路由插入位置</h2>
+<router-outlet></router-outlet>

@@ -35,3 +35,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 路由重定向
 router.navigate
 通配符**
+多终端测试

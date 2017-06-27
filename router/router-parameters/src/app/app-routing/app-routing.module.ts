@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+// import { ChildRoutingModule } from '../child-routing/child-routing.module';
+
 // import { AppRoutingRoutingModule } from './app-routing-routing.module';
 import { Component1Component } from '../component1/component1.component';
 import { Component2Component } from '../component2/component2.component';
@@ -12,7 +14,7 @@ import { Component6Component } from '../component6/component6.component';
 
 const childRoutes: Routes = [
     {
-      path: 'component4',
+      path: 'child',
       component: Component4Component,
        children: [
         {
@@ -55,6 +57,35 @@ const routes: Routes = [
         component: Component4Component
       },
       {
+      path: 'child',
+      component: Component4Component,
+       children: [
+        {
+          path: 'component5',
+          component: Component5Component,
+          children: [
+            {
+              path: ':id',
+              component: Component6Component
+            },
+            {
+              path: '',
+              component: Component6Component
+            }
+          ]
+        }
+      ]
+      },
+      {
+        path: 'childmodule',
+        loadChildren: 'app/child-module/child-module.module#ChildModuleModule'
+      }, 
+      {
+        path: 'outlet2',
+        component: Component3Component,
+        outlet: 'second'
+      },
+      {
         path: '',
         redirectTo: '/component3',
         pathMatch: 'full'
@@ -63,6 +94,7 @@ const routes: Routes = [
         path: '**',
         component: NotFoundComponent
       }
+
 ];
 
 @NgModule({

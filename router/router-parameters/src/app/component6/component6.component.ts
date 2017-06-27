@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './component6.component.html',
   styleUrls: ['./component6.component.css']
 })
+/*子路由的根*/
 export class Component6Component implements OnInit {
 
   constructor() { }

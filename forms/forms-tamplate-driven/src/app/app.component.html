@@ -1,0 +1,9 @@
+<div>
+    <br><br>
+    <form #myForm='ngForm'>
+        SSN: <input type="text" name='my-ssn' ngModel appSsnValidator>
+        SSN2: <input type="text" name='my-ssn2' ngModel appSsnValidator>
+        <span [hidden]='!(myForm.form.hasError("ssn", "my-ssn"))' >SSN验证</span>
+        <span [hidden]='!(myForm.form.hasError("ssn", "my-ssn2"))' >SSN2验证</span>
+    </form>
+</div>

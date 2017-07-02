@@ -1,0 +1,33 @@
+<h1>
+  {{title}}
+</h1>
+<app-component1></app-component1>
+<!-- routerLink的配置方式 -->
+<a routerLink = "/component1">component1</a>
+<br>
+<!-- 前后需要同时使用中括号 -->
+<a [routerLink] = "['/component2']">component2-使用中括号</a>
+<br>
+<a routerLink = "/component3">component3-生成菜单</a>
+<!-- 重定向 -->
+<br>
+<a routerLink = "/">cmoponent4-重定向到cmoponent3，默认路由“/”</a>
+<!-- 重定向，默认路由 -->
+<br>
+<a routerLink = "">component5-重定向到cmoponent3，默认路由“”</a>
+<!-- 参数化路由 -->
+<br>
+<a routerLink = "/component/12">component6-参数化路由</a>
+
+<br>
+<label for="">子路由</label>
+<a routerLink = "/child/component5/1">child-子路由</a>
+<br>
+<a routerLink = '/childmodule/component8'>child module-懒加载路由模块</a>
+<br>
+<a [routerLink] = '[{ outlets: { second: ["outlet2"] } }]'>outlet2-第二路由</a>
+<!-- 路由位置 -->
+<h2>路由插入位置</h2>
+<router-outlet></router-outlet>
+<h2>第二路由位置</h2>
+<router-outlet name="second"></router-outlet>

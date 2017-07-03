@@ -1,0 +1,5 @@
+<a [routerLink]='["/home"]'>Home</a>
+<a [routerLink]='[{outlets: {primary: "home", aux: "chat"}}]'>Chat</a>
+<a [routerLink]='[{outlets: {aux: null}}]'>Close Chat</a>
+<router-outlet></router-outlet>
+<router-outlet name="aux"></router-outlet>

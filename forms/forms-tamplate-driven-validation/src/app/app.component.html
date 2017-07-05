@@ -1,0 +1,27 @@
+<div>
+    <form #f='ngForm' (ngSubmit)='onSubmit(f.value, f.valid)' novalidate>
+        <div>
+            Username:
+            <input type="text" name='username' ngModel required>
+            <span [hidden]='!f.form.hasError("required", "username")'>Username is required</span>
+        </div>
+        <div>
+            telephone:
+            <input type="text" name='telephone' ngModel='13928192819' appTelephoneValidator >
+            <span [hidden]='!f.form.hasError("telephone", "telephone")'>验证手机号</span>
+        </div>
+        <div ngModelGroup='passwordGroup' appEqualValidator>
+            <div>
+                Password:
+                <input type="password" name='password' ngModel minlength="5" >
+                <span [hidden]='!f.form.hasError("minlength", ["passwordGroup", "password"])'>密码太短</span>
+            </div>
+            <div>
+                Pconfirm:
+                <input type="password" name='pconfirm' ngModel >
+                <span [hidden]='!f.form.hasError("equal", "passwordGroup")'>输入的两次密码不同</span>
+            </div>
+        </div>
+        <button type='submit'>提交</button>
+    </form>
+</div>

@@ -14,3 +14,7 @@ angular的知识点应用例子
 ###### h6
     6
 ####### h7
+
+<pre><code>
+    console.log(1);
+</code></pre>
